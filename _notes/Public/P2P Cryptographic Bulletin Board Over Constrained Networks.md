@@ -2,6 +2,7 @@
 title: P2P Cryptographic Bulletin Board Over Constrained Networks
 feed: show
 date: 2022-12-19
+tags: p2p
 ---
 
 # Scenario:
