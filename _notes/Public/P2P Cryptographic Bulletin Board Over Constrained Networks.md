@@ -4,10 +4,10 @@ feed: show
 date: 2022-12-19
 ---
 
-#Scenario:
+# Scenario:
 You want to have a web forum which is private to a specific group of people. You don't know how many people will be in this group, and it may grow or shrink over time. You don't want to rely on a third party to host your forum data, and you don't want to rely on the internet to send this data because P2P is difficult over the internet.
 
-#Proposal:
+# Proposal:
 1. Every person keeps a profile. This profile has a collection of identities.
 	1. Each identity belongs to at most one group
 	2. Each identity has an associated RSA key pair
@@ -37,5 +37,6 @@ You want to have a web forum which is private to a specific group of people. You
 	4. OpenPGP email
 	5. Beacons: for particularly small communications, a "beacon" could be used (think QR Code displayed on a public place or NFC tag placed down.) The storage available in these cases is extremely constrained (<1KB for most NFC tags, and data density of QR codes is not too great either, expect no more than 3KB.)
 		1. As a supplement to this, Beacons can be used to link to a digital envelope file location. This would save space, requiring only a header indicating what the beacon is (think "magic numbers" which mean "crypto bulletin board relay beacon"), what group it belongs to and then a link, which should either serve the digital envelope file itself or a 301 redirect to a url that will.
-#Motivations: or, why the hell would you want this?
+
+# Motivations: or, why the hell would you want this?
 Recent history makes me doubt that society can be relied on to remain stable. In today's political climate, being able to communicate with trusted communities is vital and equally vital is that untrusted parties not be privy to such information. Terrorist attacks on power infrastructure, cyber attacks on AWS, natural disasters, etc are all threats to the stability of internet communications and I think having alternative methods of distribution are necessary. In short: I think generally people will have their phones and be able to keep them powered, for the most part but anything beyond that I find less certain. This solution outlines ideas for an E2E encrypted bulletin board shared over sneakernet - if this is not private nor fault tolerant then I do not believe such concepts are achievable.
